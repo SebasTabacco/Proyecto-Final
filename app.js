@@ -1,6 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var hbs = require('hbs');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
@@ -12,6 +13,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+// Registrar vistas parciales si las estás usando
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -21,6 +24,31 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//Rutas
+app.get('/nosotros', function (req, res) {
+  res.render('nosotros', { title: 'Mi Staff' });
+});
+
+app.get('/novedades', function (req, res) {
+  res.render('novedades', { title: 'Últimos Lanzamientos Tecnológicos' });
+});
+
+app.get('/descargas', function (req, res) {
+  res.render('descargas', { title: 'Centro de Descargas' });
+});
+
+app.get('/contacto', function (req, res) {
+  res.render('contacto', { title: 'Datos Útiles' });
+});
+
+// Definir el puerto
+var port = process.env.PORT || 3001;
+
+// Crear el servidor
+var server = app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,3 +67,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+

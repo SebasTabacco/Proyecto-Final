@@ -1,0 +1,94 @@
+<h1>{{title}}</h1>
+<p>Datos Útiles</p>
+
+<div class="container mt-4">
+  <!-- Información útil -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <h4>Teléfonos Útiles</h4>
+      <ul>
+        <li><strong>Atención al cliente:</strong> +54 11 1234 5678</li>
+        <li><strong>Emergencias:</strong> +54 11 8765 4321</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4>Contactos</h4>
+      <ul>
+        <li><strong>Correo electrónico:</strong> contacto@mipagina.com</li>
+        <li><strong>Instagram:</strong> <a href="https://instagram.com/mipagina" target="_blank">@mipagina</a></li>
+        <li><strong>Facebook:</strong> <a href="https://facebook.com/mipagina" target="_blank">Mi Página Web</a></li>
+        <li><strong>Skype:</strong> <a href="skype:live:mipagina">live:mipagina</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Formulario -->
+  <form class="row g-3 needs-validation align-items-center" novalidate>
+  <!-- Primer Nombre -->
+  <div class="col-md-6">
+    <label for="validationCustom01" class="form-label text-start"> Nombre</label>
+    <input type="text" class="form-control" id="validationCustom01" placeholder="Ingresa tu nombre" required>
+    <div class="valid-feedback">*</div>
+  </div>
+
+  <!-- Apellido -->
+  <div class="col-md-6">
+    <label for="validationCustom02" class="form-label text-start">Apellido</label>
+    <input type="text" class="form-control" id="validationCustom02" placeholder="Ingresa tu apellido" required>
+    <div class="valid-feedback">*</div>
+  </div>
+
+  <!-- Crear Usuario -->
+  <div class="col-md-6">
+    <label for="validationCustomUsername" class="form-label text-start">-</label>
+    <div class="input-group">
+      <span class="input-group-text">Usuario@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" placeholder="Usuario" required>
+      <div class="invalid-feedback">*</div>
+      <hr>
+    </div>
+  </div>
+
+  <!-- Ciudad -->
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label text-start">Ciudad</label>
+    <input type="text" class="form-control" id="validationCustom03" placeholder="Ciudad" required>
+    <div class="invalid-feedback">*</div>
+  </div>
+
+  <!-- País -->
+  <div class="col-md-6">
+    <label for="validationCustom04" class="form-label text-start">País</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Seleccionar...</option>
+      <option>Argentina</option>
+      <option>Chile</option>
+      <option>Uruguay</option>
+    </select>
+    <div class="invalid-feedback">*</div>
+  </div>
+
+  <!-- Código Postal -->
+  <div class="col-md-6">
+    <label for="validationCustom05" class="form-label text-start">Código Postal</label>
+    <input type="text" class="form-control" id="validationCustom05" placeholder="1234" required>
+    <div class="invalid-feedback">*</div>
+  </div>
+
+  <!-- Casilla de verificación -->
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label text-start" for="invalidCheck">
+        Acepto los términos y condiciones
+      </label>
+      <div class="invalid-feedback">Debes aceptar antes de enviar.</div>
+    </div>
+  </div>
+
+  <!-- Botón enviar -->
+  <div class="col-12 text-center">
+    <button class="btn btn-primary mt-3" type="submit">Enviar</button>
+  </div>
+</form>
+
